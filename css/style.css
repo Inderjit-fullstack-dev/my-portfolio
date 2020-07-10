@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Raleway:wght@300;400&display=swap');
+
+body {
+    font-family: 'Raleway', sans-serif;
+}
+
+#banner {
+    background-image: url('../images/bg.jpg');
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-transform: uppercase;
+}
+
+#banner h1 {
+    color: #fff;
+    font-family: 'Oswald', sans-serif;
+    font-weight: bold;
+    font-size: 3.75em;
+    line-height: 0.1em;
+    letter-spacing: 0.1em;
+    text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+#banner p {
+    border-top: 2px solid rgba(255, 255, 255, .7);
+    margin-top: 40px;
+    color: rgba(255, 255, 255, .8);
+    font-size: 25px;
+    padding: 10px 0px;
+}
+
+.bg-dark {
+    background-color: #0D2C5A!important;
+} 
+
+section.wrapper h1 {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 35px;
+    padding-top:80px;
+    padding-bottom: 80px;
+    position: relative;
+}
+section.wrapper h1::after {
+    content: '';
+    width: 250px;
+    height: 3px;
+    background-color: #E76270;
+    position: absolute;
+    left:50%;
+    transform: translateX(-50%);
+    top: calc(100% - 70px);
+}
+
+#about h5, #skills h6 {
+    font-weight: bold;
+}
+
+#about p {
+    padding: 20px 0px;
+    text-align: justify;
+}
+
+#about a {
+    margin-right: 10px;
+    color: #5B9BBC;
+}
+
+#skills, #education {
+    background-color: #ededed;
+    margin-top: 80px;
+    padding-bottom: 80px;
+} 
+
+#contact {
+    background-color: #010f24;
+    margin-top: 80px;
+    padding-bottom: 80px;
+    color: #fff;
+}
+
+#skills ul {
+    width: 200px;
+    text-align: left;
+    margin:10px auto;
+}
+
+#skills ul li {
+    font-family: sans-serif;
+}
+
+#skills h4 {
+    text-decoration: underline;
+}
+
+/* overlay of lightbox */
+
+.chocolat-wrapper.chocolat-visible {
+    z-index: 9999;
+}
+
+.chocolat-wrapper .chocolat-bottom {
+    background: #000;
+}
+
+.chocolat-overlay {
+    background-color: #000;
+}
+
+.project-wrapper {
+    text-align: center;
+}
+
+.project-wrapper img {
+    border-radius: 100%;
+    width: 150px;
+    height: 150px;
+    margin: 20px 0px;
+    border: 5px solid #ffffff;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.41);
+}
+
+footer {
+    text-align: center;
+    color: #fff;
+    background-color: #010916;
+    padding: 20px 0px;
+    font-size: 13px;
+}

@@ -26,27 +26,23 @@
             <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
               <ul class="navbar-nav">
                 <li class="nav-item active">
-                  <a class="nav-link" href="#">About me 
+                  <a class="nav-link" href="#about">About me 
                       <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Skills</a>
+                  <a class="nav-link" href="#skills">Skills</a>
                 </li>
                 
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Experience</a>
+                  <a class="nav-link" href="#experience">Experience & Projects</a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Education</a>
-                </li>
+                    <a class="nav-link" href="#education">Education</a>
+                </li> 
 
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Portfolio</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Contact me</a>
+                    <a class="nav-link" href="#contact-form">Contact me</a>
                 </li>
 
 
@@ -61,16 +57,14 @@
                 <h1>About me</h1>
                 <div class="row">
                     <div class="col-md-4">
-                        <img src="images/me.jpg" alt="it is me" class="img img-fluid">
+                        <img src="images/me.jpeg" alt="it is me" class="img img-fluid">
                     </div>
                     <div class="col-md-4">
                         <h5>Bonjour, IT'S ME! 😄</h5>
                         <p>
-                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-                            Quia cum ullam necessitatibus voluptates officiis? Tenetur ratione, 
-                            dolorem autem eius obcaecati neque. Ullam rem 
-                            nesciunt doloribus rerum distinctio autem dicta labore.<br /><br />
-                            Lorem ipsum dolor sit amet.
+                            I am inder a software developer having 4 years of industrial experience in .net technology.
+                            These days i am learning react from cleverprogrammers.com and i am really enjoying it a lot.
+                            I love to play football and playing with new techs.
 
                             <br /><br />
                             <a href="https://www.linkedin.com/in/inderjit-singh-997591175" target="_blank"><i class="fa fa-linkedin fa-2x"></i></a>
@@ -171,6 +165,7 @@
                 </div>
 
                 <br />
+
                 <h3 class="text-center text-bold mb-5"><strong>Recent Projects</strong></h3>
 
                 <div class="row mb-5 chocolat-parent">
@@ -267,13 +262,12 @@
                 <div class="row justify-content-md-center">
                     <div class="col-md-8">
                         <p>Need anything built, want to work together or simply want to have a chat?
-                            Drop me an e-mail at mail@iaminderjit.com or simply
+                            Drop me an e-mail at inderjit.fullstack.dev@gmail.com or simply
                              fill out the form below and I will reply to you soon!</p> 
 
                         <form action="#" id = "contact-form" class="text-center">
                             <input type = "text" name = "name" id = "name" 
-                            placeholder="Name"
-                            autofocus
+                            placeholder="Name" 
                             class = "form-control"/>
                             <br />
                             <input type = "email" name = "email" id = "email" 
@@ -294,8 +288,11 @@
         <!-- End of the education section -->
 
         <footer> Developed with 💜 By 🇲🇪 </footer>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="js/smooth-scroll.polyfills.js"></script>
 
         <script>
+        	var scroll = new SmoothScroll('a[href*="#"]:not([data-easing])');
             document.addEventListener("DOMContentLoaded", function(event) { 
                 Chocolat(document.querySelectorAll('.chocolat-parent .chocolat-image'),{
                     container: document.querySelector('#my-container'),
@@ -303,6 +300,13 @@
                     allowZoom: false,
                     loop: true,
                 })
+            });
+
+            $(document).ready(function(){
+            	$('.nav-link').click(function(){
+            		$('li.nav-item').removeClass('active');
+            		$(this).parent('li').addClass('active');
+            	});
             });
         </script>
     </body>
